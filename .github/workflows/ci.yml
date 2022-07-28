@@ -24,8 +24,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Use the following step when updating the `parsec-service-test-all` image
-      # - name: Build the container
-      #   run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
+      - name: Build the container
+        run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
       - name: Run the container to execute the test script
         # run:
         #   docker run -v $(pwd):/tmp/parsec -w /tmp/parsec ghcr.io/parallaxsecond/parsec-service-test-all /tmp/parsec/ci.sh cargo-check
@@ -38,8 +38,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Use the following step when updating the `parsec-service-test-all` image
-      # - name: Build the container
-      #   run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
+      - name: Build the container
+        run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
       - name: Run the container to execute the test script
         # run:
         #   docker run -v $(pwd):/tmp/parsec -w /tmp/parsec ghcr.io/parallaxsecond/parsec-service-test-all /tmp/parsec/ci.sh mbed-crypto
@@ -52,8 +52,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Use the following step when updating the `parsec-service-test-all` image
-      # - name: Build the container
-      #   run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
+      - name: Build the container
+        run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
       - name: Run the container to execute the test script
         # Not running stress tests because they fail, presumably because of the same issue as #264
         # run:
@@ -67,8 +67,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Use the following step when updating the `parsec-service-test-all` image
-      # - name: Build the container
-      #   run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
+      - name: Build the container
+        run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
       - name: Run the container to execute the test script
         # run:
         #   docker run -v $(pwd):/tmp/parsec -w /tmp/parsec ghcr.io/parallaxsecond/parsec-service-test-all /tmp/parsec/ci.sh tpm
@@ -81,8 +81,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Use the following step when updating the `parsec-service-test-all` image
-      # - name: Build the container
-      #   run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
+      - name: Build the container
+        run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
       - name: Run the container to execute the test script
         # run:
         #   docker run -v $(pwd):/tmp/parsec -w /tmp/parsec ghcr.io/parallaxsecond/parsec-service-test-all /tmp/parsec/ci.sh trusted-service
@@ -95,8 +95,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Use the following step when updating the `parsec-service-test-all` image
-      # - name: Build the container
-      #   run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
+      - name: Build the container
+        run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
       - name: Run the container to execute the test script
         # Not running stress tests because rust-cryptoauthlib test-interface does not support required calls
         # run:
@@ -110,8 +110,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Use the following step when updating the `parsec-service-test-all` image
-      # - name: Build the container
-      #   run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
+      - name: Build the container
+        run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
       - name: Run the fuzz test script
         # Not running stress tests because rust-cryptoauthlib test-interface does not support required calls
         # run: ./fuzz.sh test
@@ -124,8 +124,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Use the following step when updating the `parsec-service-test-all` image
-      # - name: Build the container
-      #   run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
+      - name: Build the container
+        run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-all -f parsec-service-test-all.Dockerfile . && popd
       - name: Run the container to execute the test script
         # run:
         #   docker run -v $(pwd):/tmp/parsec -w /tmp/parsec ghcr.io/parallaxsecond/parsec-service-test-all /tmp/parsec/ci.sh on-disk-kim
@@ -139,8 +139,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Use the following step when updating the `parsec-service-test-cross-compile` image
-      # - name: Build the container
-      #   run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-cross-compile -f parsec-service-test-cross-compile.Dockerfile . && popd
+      - name: Build the container
+        run: pushd e2e_tests/docker_image && docker build -t parsec-service-test-cross-compile -f parsec-service-test-cross-compile.Dockerfile . && popd
       - name: Run the container to execute the test script
         run:
           docker run -v $(pwd):/tmp/parsec -w /tmp/parsec ghcr.io/parallaxsecond/parsec-service-test-cross-compile /tmp/parsec/test/cross-compile.sh
